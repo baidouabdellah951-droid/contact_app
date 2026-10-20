@@ -18,10 +18,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install flet requirements-parser
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Build APK with Flet
-        uses: flet-dev/build-app-action@main
-        with:
-          target: main.py
-          platform: android
+        run: flet build apk
