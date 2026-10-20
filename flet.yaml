@@ -1,0 +1,4 @@
+app:
+  name: "My Application"
+  description: "تطبيقي الأول باستخدام فليت"
+  org: "com.abdellah.contacts"
